@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleGame", "SampleGame.csproj", "{34B5395F-E85C-45A6-B2BA-AABE3417DEB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngine", "..\GameEngine\GameEngine.csproj", "{B8B1DDFF-29F9-4088-BA75-05B2D7CE0C8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameAI", "..\GameAI\GameAI.csproj", "{730364D6-9306-4DF9-B72F-8C26E616D29E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarLib", "..\CarLib\CarLib.csproj", "{FB9F633D-97DA-4E1A-A860-554F227081BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{34B5395F-E85C-45A6-B2BA-AABE3417DEB2}.0 = {FB9F633D-97DA-4E1A-A860-554F227081BE}
+		{34B5395F-E85C-45A6-B2BA-AABE3417DEB2}.1 = {730364D6-9306-4DF9-B72F-8C26E616D29E}
+		{34B5395F-E85C-45A6-B2BA-AABE3417DEB2}.2 = {B8B1DDFF-29F9-4088-BA75-05B2D7CE0C8E}
+		{730364D6-9306-4DF9-B72F-8C26E616D29E}.0 = {B8B1DDFF-29F9-4088-BA75-05B2D7CE0C8E}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{34B5395F-E85C-45A6-B2BA-AABE3417DEB2}.Debug.ActiveCfg = Debug|.NET
+		{34B5395F-E85C-45A6-B2BA-AABE3417DEB2}.Debug.Build.0 = Debug|.NET
+		{34B5395F-E85C-45A6-B2BA-AABE3417DEB2}.Release.ActiveCfg = Release|.NET
+		{34B5395F-E85C-45A6-B2BA-AABE3417DEB2}.Release.Build.0 = Release|.NET
+		{B8B1DDFF-29F9-4088-BA75-05B2D7CE0C8E}.Debug.ActiveCfg = Debug|.NET
+		{B8B1DDFF-29F9-4088-BA75-05B2D7CE0C8E}.Debug.Build.0 = Debug|.NET
+		{B8B1DDFF-29F9-4088-BA75-05B2D7CE0C8E}.Release.ActiveCfg = Release|.NET
+		{B8B1DDFF-29F9-4088-BA75-05B2D7CE0C8E}.Release.Build.0 = Release|.NET
+		{730364D6-9306-4DF9-B72F-8C26E616D29E}.Debug.ActiveCfg = Debug|.NET
+		{730364D6-9306-4DF9-B72F-8C26E616D29E}.Debug.Build.0 = Debug|.NET
+		{730364D6-9306-4DF9-B72F-8C26E616D29E}.Release.ActiveCfg = Release|.NET
+		{730364D6-9306-4DF9-B72F-8C26E616D29E}.Release.Build.0 = Release|.NET
+		{FB9F633D-97DA-4E1A-A860-554F227081BE}.Debug.ActiveCfg = Debug|.NET
+		{FB9F633D-97DA-4E1A-A860-554F227081BE}.Debug.Build.0 = Debug|.NET
+		{FB9F633D-97DA-4E1A-A860-554F227081BE}.Release.ActiveCfg = Release|.NET
+		{FB9F633D-97DA-4E1A-A860-554F227081BE}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

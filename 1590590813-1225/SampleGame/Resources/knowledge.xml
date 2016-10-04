@@ -1,0 +1,75 @@
+<?xml version="1.0"?><Knowledge>
+    <Fact>
+        <name>race started</name>
+        <Value>0.0</Value>
+    </Fact>
+    <Fact>
+        <name>collision ahead</name>
+        <Value>0.0</Value>
+    </Fact>
+    <Fact>
+        <name>race over</name>
+        <Value>0.0</Value>
+    </Fact>
+    <StateName>
+        <name>Idle</name>
+    </StateName>
+    <StateName>
+        <name>Race</name>
+    </StateName>
+    <StateName>
+        <name>Evade</name>
+    </StateName>
+    <StateDefinition>
+        <name>Idle</name>
+        <Transitioner>
+           <Target>Race</Target>
+           <Expression>
+              <AndValues>true</AndValues>
+              <Logic>
+                 <Fact1>race started</Fact1>
+                 <Operator>True</Operator>
+                 <Fact2>null</Fact2>
+              </Logic>
+           </Expression>
+        </Transitioner>
+    </StateDefinition>
+    <StateDefinition>
+        <name>Race</name>
+        <Transitioner>
+           <Target>Idle</Target>
+           <Expression>
+              <AndValues>true</AndValues>
+              <Logic>
+                 <Fact1>race over</Fact1>
+                 <Operator>True</Operator>
+                 <Fact2>null</Fact2>
+              </Logic>
+           </Expression>
+        </Transitioner>
+        <Transitioner>
+           <Target>Evade</Target>
+           <Expression>
+              <AndValues>true</AndValues>
+              <Logic>
+                 <Fact1>collision ahead</Fact1>
+                 <Operator>True</Operator>
+                 <Fact2>null</Fact2>
+              </Logic>
+              <Logic>
+                 <Fact1>race started</Fact1>
+                 <Operator>True</Operator>
+                 <Fact2>null</Fact2>
+              </Logic>
+              <Logic>
+                 <Fact1>race over</Fact1>
+                 <Operator>False</Operator>
+                 <Fact2>null</Fact2>
+              </Logic>
+           </Expression>
+        </Transitioner>
+    </StateDefinition>
+    <StateDefinition>
+        <name>Evade</name>
+    </StateDefinition>
+</Knowledge>
